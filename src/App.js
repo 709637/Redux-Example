@@ -4,24 +4,23 @@ import './App.css';
 import CompTwo from './CustomComponents/CompTwo/CompTwo.js';
 import {Provider} from 'react-redux';
 import store from './redux/store';
-import {storeApi} from './redux/store';
 import CakeContainer from './CustomComponents/cakeContainer';
 import TotalItemContainer from './CustomComponents/totalItemCount';
 import TotalItemLeft from './CustomComponents/TotalItemLeft';
 import NumberOfTeamsGet from './CustomComponents/NumberOfTeamsGet';
+import UseSelectorComp from './Hooks/UseSelectorComp';
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <form>
-          <label>Name :  </label><input type="text"></input><br/>
-          <label>Age :  </label><input type="text"></input>   
-         </form>
-      </header>
-      {/* <CakeContainer></CakeContainer> */}
-      {/* <TotalItemContainer></TotalItemContainer> */}
+     
+      { <CakeContainer></CakeContainer> }
+      { <TotalItemContainer></TotalItemContainer> }
+      {<UseSelectorComp></UseSelectorComp>}
+
+
+
       <TotalItemLeft></TotalItemLeft>
       <NumberOfTeamsGet></NumberOfTeamsGet>
     </div>

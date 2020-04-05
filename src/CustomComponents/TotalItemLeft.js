@@ -58,8 +58,8 @@ class TotalItemLeft extends React.Component {
 const mapStateToProps = state => {
     console.log("Class : state-------", state);
     return {
-        numOfTeams: state.numOfTeams,
-        teams: state.teams
+        numOfTeams: state.team.numOfTeams,
+        teams: state.team.teams
     }
 
 }

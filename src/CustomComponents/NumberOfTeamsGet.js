@@ -6,7 +6,7 @@ import { Tribe_Change } from '../redux/apiCall/apiType';
 class NumberOfTeamsGet extends React.Component {
     constructor(props) {
         super(props);
-        
+        console.log("Inside NumberOfTeamsGet constructor apiReducer",props)
     }
 
     
@@ -25,8 +25,8 @@ class NumberOfTeamsGet extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        numOfTeams: state.numOfTeams,
-        teams: state.teams
+        numOfTeams: state.team.numOfTeams,
+        teams: state.team.teams
     }
 
 }
